@@ -31,15 +31,14 @@ const Contact = sequelize.define(
         }
     }
 )
-Contact.associate = () => {
-    Contact.hasMany(Contact, {
-        foreignKey: 'linkedId',
-        as: 'linkedContact'
-    });
-    Contact.belongsTo(Contact, {
-        foreignKey: 'linkedId',
-        as: 'parentContact'
-    });
-}
+
+Contact.hasMany(Contact, {
+    foreignKey: 'linkedId',
+    as: 'linkedContact'
+});
+Contact.belongsTo(Contact, {
+    foreignKey: 'linkedId',
+    as: 'parentContact'
+});
 
 exports.Contact = Contact;
