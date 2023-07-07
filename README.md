@@ -64,9 +64,12 @@ src/modules/contact
 
 4. ```npm run start_dev```
 <br>
+
 ## How to test
-Use this as curl 
-```
+
+Use this as curl
+<br>
+```curl
 curl --location 'https://bite-speed-assignment-git-main-vikash-6057.vercel.app/api/v1/contacts/identify' \
 --header 'Content-Type: application/json' \
 --data '{
